@@ -12,6 +12,11 @@ const TicTacToe = () => {
     setIsNext(!isNext);
   };
 
+  const handleRestart = () => {
+    setSquares(Array(9).fill(null));
+    setXIsNext(true);
+  };
+
   const renderSquare = (i) => {
     return (
       <button onClick={() => handleClick(i)} className={squares[i] === 'X' ? 'x' : 'o'}>
@@ -43,6 +48,7 @@ const TicTacToe = () => {
         {renderSquare(7)}
         {renderSquare(8)}
       </div>
+      <button onClick={handleRestart}>Restart Game</button>
     </div>
   );
 }
