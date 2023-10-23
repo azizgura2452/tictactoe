@@ -14,7 +14,7 @@ const TicTacToe = () => {
 
   const handleRestart = () => {
     setSquares(Array(9).fill(null));
-    setXIsNext(true);
+    setIsNext(true);
   };
 
   const renderSquare = (i) => {
